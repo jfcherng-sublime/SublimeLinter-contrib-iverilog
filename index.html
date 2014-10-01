@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Sublimelinter-contrib-iverilog : This linter plugin for SublimeLinter provides an interface to iverilog into Sublime Text.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Sublimelinter-contrib-iverilog</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jfcherng/SublimeLinter-contrib-iverilog">View on GitHub</a>
+
+          <h1 id="project_title">Sublimelinter-contrib-iverilog</h1>
+          <h2 id="project_tagline">This linter plugin for SublimeLinter provides an interface to iverilog into Sublime Text.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jfcherng/SublimeLinter-contrib-iverilog/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jfcherng/SublimeLinter-contrib-iverilog/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="sublimelinter-contrib-iverilog" class="anchor" href="#sublimelinter-contrib-iverilog"><span class="octicon octicon-link"></span></a>SublimeLinter-contrib-iverilog</h1>
+
+<p>This linter plugin for <a href="http://sublimelinter.readthedocs.org">SublimeLinter</a> provides an interface to Verilog into Sublime Text.
+It will be used with files that have the "verilog" syntax.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions <a href="http://sublimelinter.readthedocs.org/en/latest/installation.html">here</a>.</p>
+
+<h3>
+<a name="linter-installation" class="anchor" href="#linter-installation"><span class="octicon octicon-link"></span></a>Linter installation</h3>
+
+<p>Before installing this plugin, you must ensure that <code>iverilog</code> is installed on your system.
+To install <code>iverilog</code>, please see <a href="http://iverilog.wikia.com/wiki/Installation_Guide">this</a>.</p>
+
+<h3>
+<a name="plugin-installation" class="anchor" href="#plugin-installation"><span class="octicon octicon-link"></span></a>Plugin installation</h3>
+
+<p>Please use <a href="https://sublime.wbond.net/installation">Package Control</a> to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.</p>
+
+<p>To install via Package Control, do the following:</p>
+
+<ol>
+<li><p>Within Sublime Text, bring up the <a href="http://docs.sublimetext.info/en/sublime-text-3/extensibility/command_palette.html">Command Palette</a> and type <code>install</code>. Among the commands you should see <code>Package Control: Install Package</code>. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.</p></li>
+<li><p>When the plugin list appears, type <code>iverilog</code>. Among the entries you should see <code>SublimeLinter-contrib-iverilog</code>. If that entry is not highlighted, use the keyboard or mouse to select it.</p></li>
+</ol><h2>
+<a name="settings" class="anchor" href="#settings"><span class="octicon octicon-link"></span></a>Settings</h2>
+
+<p>For general information on how SublimeLinter works with settings, please see <a href="http://sublimelinter.readthedocs.org/en/latest/settings.html">Settings</a>. For information on generic linter settings, please see <a href="http://sublimelinter.readthedocs.org/en/latest/linter_settings.html">Linter Settings</a>.</p>
+
+<h2>
+<a name="constraints" class="anchor" href="#constraints"><span class="octicon octicon-link"></span></a>Constraints</h2>
+
+<ul>
+<li>You have to include your module like <code>`include "xxx.v"</code> rather than write all .v files while doing a simulatoin. <code>iverilog xxx.v xxx_t.v -o a.out</code>
+</li>
+</ul><h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>If you would like to contribute enhancements or fixes, please do the following:</p>
+
+<ol>
+<li>Fork the plugin repository.</li>
+<li>Hack on a separate topic branch created from the latest <code>master</code>.</li>
+<li>Commit and push the topic branch.</li>
+<li>Make a pull request.</li>
+<li>Be patient.  ;-)</li>
+</ol><p>Please note that modications should follow these coding guidelines:</p>
+
+<ul>
+<li>Indent is 4 spaces.</li>
+<li>Code should pass flake8 and pep257 linters.</li>
+<li>Vertical whitespace helps readability, don’t be afraid to use it.</li>
+</ul><p>Thank you for helping out!</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Sublimelinter-contrib-iverilog maintained by <a href="https://github.com/jfcherng">jfcherng</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
