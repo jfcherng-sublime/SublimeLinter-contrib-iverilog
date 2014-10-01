@@ -34,8 +34,14 @@
         <h1>
 <a name="sublimelinter-contrib-iverilog" class="anchor" href="#sublimelinter-contrib-iverilog"><span class="octicon octicon-link"></span></a>SublimeLinter-contrib-iverilog</h1>
 
-<p>This linter plugin for <a href="http://sublimelinter.readthedocs.org">SublimeLinter</a> provides an interface to Verilog into Sublime Text.
+<p>This linter plugin for <a href="http://sublimelinter.readthedocs.org">SublimeLinter</a> provides an interface to <a href="http://iverilog.wikia.com/wiki/Main_Page">iverilog</a> into Sublime Text.
 It will be used with files that have the "verilog" syntax.</p>
+
+<h2>
+<a name="prerequisite" class="anchor" href="#prerequisite"><span class="octicon octicon-link"></span></a>Prerequisite</h2>
+
+<p>Verilog syntax highlight is not natiavely supported for Sublime Text.
+You may install <a href="https://sublime.wbond.net/packages/Verilog">Sublime Text Verilog</a> to do the job.</p>
 
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
@@ -64,12 +70,17 @@ To install <code>iverilog</code>, please see <a href="http://iverilog.wikia.com/
 <p>For general information on how SublimeLinter works with settings, please see <a href="http://sublimelinter.readthedocs.org/en/latest/settings.html">Settings</a>. For information on generic linter settings, please see <a href="http://sublimelinter.readthedocs.org/en/latest/linter_settings.html">Linter Settings</a>.</p>
 
 <h2>
-<a name="constraints" class="anchor" href="#constraints"><span class="octicon octicon-link"></span></a>Constraints</h2>
+<a name="constraints" class="anchor" href="#constraints"><span class="octicon octicon-link"></span></a>Constraint(s)</h2>
 
-<ul>
-<li>You have to include your module like <code>`include "xxx.v"</code> rather than write all .v files while doing a simulatoin. <code>iverilog xxx.v xxx_t.v -o a.out</code>
-</li>
-</ul><h2>
+<p>If your module references design(s) from other .v file(s), you must use <code>`include "xxx.v"</code> to include them for this linting plugin.</p>
+
+<p>For example, one of ways to do a simulation is <code>iverilog xxx.v xxx_t.v -o a.out</code> where "xxx_t.v" is a testbench file.
+This way does not use the <code>`include</code> syntax in "xxx_t.v" but combines files in the command line.
+Therefore, you will see <code>Unknown module type: XXX</code> in "xxx_t.v" since this plugin only check the current file.
+To avoid this, you have to modify "xxx_t.v" to include "xxx.v" and use <code>iverilog xxx_t.v -o a.out</code> instead.
+<img src="http://jfcherng.github.io/SublimeLinter-contrib-iverilog/images/include_module_file.png" alt="include_module_file"></p>
+
+<h2>
 <a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
 
 <p>If you would like to contribute enhancements or fixes, please do the following:</p>
