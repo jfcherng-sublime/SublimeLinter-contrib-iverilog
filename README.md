@@ -1,8 +1,12 @@
 SublimeLinter-contrib-iverilog
 ==============================
 
-This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to Verilog into Sublime Text.
+This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [iverilog](http://iverilog.wikia.com/wiki/Main_Page) into Sublime Text.
 It will be used with files that have the "verilog" syntax.
+
+## Prerequisite
+Verilog syntax highlight is not natively supported by Sublime Text.
+You may install [Sublime Text Verilog](https://sublime.wbond.net/packages/Verilog) to do the job.
 
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](http://sublimelinter.readthedocs.org/en/latest/installation.html).
@@ -23,10 +27,15 @@ To install via Package Control, do the following:
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings](http://sublimelinter.readthedocs.org/en/latest/settings.html). For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
 
+## Constraint(s)
+If your module references design(s) from other .v file(s), you must use `` `include "xxx.v"`` to include them for this linting plugin.
 
-## Constraints
+For example, one of ways to do a simulation is `iverilog xxx.v xxx_t.v -o a.out` where "xxx_t.v" is a testbench file.
+This way does not use the `` `include`` syntax in "xxx_t.v" but lists files in the command line.
+Therefore, you will see ``Unknown module type: XXX`` in "xxx_t.v" since this plugin only check the current file.
+To avoid this, you have to modify "xxx_t.v" to include "xxx.v" and use `iverilog xxx_t.v -o a.out` instead.
 
-- You have to include your module like `` `include "xxx.v"`` rather than write all .v files while doing a simulatoin. `iverilog xxx.v xxx_t.v -o a.out`
+![include_module_file](http://jfcherng.github.io/SublimeLinter-contrib-iverilog/images/include_module_file.png)
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
