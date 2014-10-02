@@ -4,12 +4,12 @@ SublimeLinter-contrib-iverilog
 This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [iverilog](http://iverilog.wikia.com/wiki/Main_Page) into Sublime Text.
 It will be used with files that have the "verilog" syntax.
 
-## Prerequisite
-Verilog syntax highlight is not natively supported by Sublime Text.
-You may install [Sublime Text Verilog](https://sublime.wbond.net/packages/Verilog) to do the job.
-
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](http://sublimelinter.readthedocs.org/en/latest/installation.html).
+
+### Prerequisite
+Verilog syntax highlight is not natively supported by Sublime Text.
+You may install [Sublime Text Verilog](https://sublime.wbond.net/packages/Verilog) to do the job.
 
 ### Linter installation
 Before installing this plugin, you must ensure that `iverilog` is installed on your system.
