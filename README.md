@@ -7,7 +7,6 @@ It will be used with files that have the "verilog" syntax.
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](http://sublimelinter.readthedocs.org/en/latest/installation.html).
 
-### Prerequisite
 Verilog syntax highlight is not natively supported by Sublime Text.
 You may install [Sublime Text Verilog](https://sublime.wbond.net/packages/Verilog) to do the job.
 
