@@ -36,6 +36,13 @@ To avoid this, you have to modify "xxx_t.v" to include "xxx.v" and use `iverilog
 
 ![include_module_file](http://jfcherng.github.io/SublimeLinter-contrib-iverilog/images/include_module_file.png)
 
+You may use "include guard" to prevent from module redefinition.
+
+    `ifndef _XXX_
+    `define _XXX_
+        // your module design
+    `endif
+
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
 
