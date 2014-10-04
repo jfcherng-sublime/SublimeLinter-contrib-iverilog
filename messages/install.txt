@@ -7,4 +7,4 @@ INSTALLATION
 Before this plugin will activate, you *must* follow the installation
 instructions here:
 
-https://github.com/jfcherng/SublimeLinter-verilog
+https://github.com/jfcherng/SublimeLinter-contrib-iverilog
