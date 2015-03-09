@@ -17,8 +17,8 @@ class Iverilog (Linter):
     tempfile_suffix = 'verilog'
     # We are missing out on some errors by ignoring multiline messages.
     regex = (
-        r'^([^:]+):(?P<line>\d+): '
-        r'(?:(?P<error>error)|(?P<warning>warning): )?'
-        r'(?P<message>.+)'
+        r'^([^:]+):.*:(?P<line>\d*):'
+        r'.((?P<error>error)|(?P<warning>warning))?'
+        r'(?P<message>.*)'
     )
     error_stream = util.STREAM_BOTH
