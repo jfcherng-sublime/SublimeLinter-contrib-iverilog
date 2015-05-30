@@ -8,8 +8,8 @@
 # License: MIT
 #
 
+import sublime, sublime_plugin
 from SublimeLinter.lint import Linter, util
-import platform
 
 
 class Iverilog (Linter):
@@ -18,7 +18,7 @@ class Iverilog (Linter):
     tempfile_suffix = 'verilog'
     # We are missing out on some errors by ignoring multiline messages.
 
-    if platform.system() == 'Windows':
+    if sublime.platform() == 'windows':
         regex = (
             r'^([^:]+):.*:(?P<line>\d*):'
             r'.((?P<error>error)|(?P<warning>warning))?'
