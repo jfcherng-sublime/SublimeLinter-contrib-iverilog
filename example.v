@@ -7,8 +7,8 @@
 // Coder       : Deepak
 //-----------------------------------------------------
 
-module up_counter    (
-    out     ,  // Output of the counter
+module up_counter (
+    out     ,  // Output of the counterq
     enable  ,  // enable for counter
     clk     ,  // clock Input
     resest      // reset Input
