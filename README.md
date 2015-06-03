@@ -35,7 +35,7 @@ For general information on how SublimeLinter works with settings, please see [Se
 For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
 
 ## Example(s)
-![lint_example](https://raw.githubusercontent.com/jfcherng/SublimeLinter-contrib-iverilog/gh-pages/images/lint_example.png)
+![linting_example](https://raw.githubusercontent.com/jfcherng/SublimeLinter-contrib-iverilog/gh-pages/images/linting_example.png)
 
 ## Constraint(s)
 If your module references design(s) from other .v file(s), you must use `` `include "xxx.v"`` to include them for this linting plugin.
