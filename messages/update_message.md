@@ -1,5 +1,2 @@
-SublimeLinter-contrib-iverilog
-==============================
-
 SublimeLinter-contrib-iverilog has been updated. To see the changelog, visit
-Preferences > Package Settings > SublimeLinter-contrib-iverilog > Changelog
+Preferences » Package Settings » SublimeLinter-contrib-iverilog » Changelog
