@@ -2,7 +2,7 @@ SublimeLinter-contrib-iverilog
 ==============================
 
 This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [iverilog](http://iverilog.wikia.com/wiki/Main_Page) into Sublime Text.
-It will be used with files that have the "Verilog" syntax.
+It will be used with files that have the `Verilog` syntax.
 
 
 Installation
@@ -45,12 +45,14 @@ For general information on how SublimeLinter works with settings, please see [Se
 For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
 
 
-## Examples
+Demo
+====
 
 ![linting_example](https://raw.githubusercontent.com/jfcherng/SublimeLinter-contrib-iverilog/gh-pages/images/linting_example.png)
 
 
-## Constraints
+Constraints
+===========
 
 If your module references design(s) from other .v file(s), you must use ```include "module.v"`` to include them for this linting plugin.
 
@@ -117,3 +119,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+Supporters <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ATXYY9Y78EQ3Y" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" /></a>
+==========
+
+Thank you guys for sending me some cups of coffee.
