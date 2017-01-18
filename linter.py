@@ -4,7 +4,7 @@
 #
 # Written by Jack Cherng
 # https://github.com/jfcherng/SublimeLinter-contrib-iverilog
-# Copyright (c) 2015 jfcherng
+# Copyright (c) 2017 jfcherng
 #
 # License: MIT
 #
@@ -28,7 +28,7 @@ class Iverilog(Linter):
     else:
         filepath = r'[^:]+'
 
-    # what kind of message should be caught?
+    # what kind of messages should be caught?
     regex = (
         r'(?P<file>{0}):(?P<line>\d+): '
         r'((?P<warning>warning: )|(?P<error>error: |))'

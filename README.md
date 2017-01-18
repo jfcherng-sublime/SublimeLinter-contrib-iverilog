@@ -2,7 +2,8 @@ SublimeLinter-contrib-iverilog
 ==============================
 
 This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [iverilog](http://iverilog.wikia.com/wiki/Main_Page) into Sublime Text.
-It will be used with files that have the `Verilog` syntax.
+To make this plugin work, you need to have `iverilog` installed.
+This plugin will be activated with files that have the `Verilog` syntax.
 
 
 Installation
@@ -100,7 +101,7 @@ License
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Jack Cherng
+Copyright (c) 2017 Jack Cherng
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
