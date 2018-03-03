@@ -9,20 +9,22 @@ This plugin will be activated with files that have the `Verilog` syntax.
 Installation
 ============
 
-SublimeLinter 3 must be installed in order to use this plugin.
-If SublimeLinter 3 is not installed, please follow the instructions [here](http://sublimelinter.readthedocs.org/en/latest/installation.html).
+SublimeLinter must be installed in order to use this plugin.
+If SublimeLinter is not installed, please follow the instructions [here](http://sublimelinter.readthedocs.org/en/latest/installation.html).
 
 Verilog syntax highlight is not natively supplied by Sublime Text.
 You may install [Sublime Text Verilog](https://sublime.wbond.net/packages/Verilog) to do the job.
 
 
-## Linter installation
+Linter installation
+-------------------
 
 Before installing this plugin, you must ensure that `iverilog` is installed on your system.
 To install `iverilog`, please see [this](http://iverilog.wikia.com/wiki/Installation_Guide).
 
 
-## Plugin installation
+Plugin installation
+-------------------
 
 Please use [Package Control](https://sublime.wbond.net/installation) to install the linter plugin.
 This will ensure that the plugin will be updated when new versions are available.
@@ -55,10 +57,10 @@ Demo
 Constraints
 ===========
 
-If your module references design(s) from other .v file(s), you must use ```include "module.v"`` to include them for this linting plugin.
+If your module references designs from other .v files, you must use `` `include "module.v"`` to include them for this linting plugin.
 
 For example, one of ways to do a simulation is `iverilog module.v module_t.v -o a.out` where `module_t.v` is a testbench file.
-This way does not use the ```include`` syntax in `module_t.v` but lists files in the command line.
+This way does not use the `` `include`` syntax in `module_t.v` but lists files in the command line.
 Therefore, you will see ``Unknown module type: module`` in `module_t.v` since this plugin only check the current file.
 To avoid this, you have to modify `module_t.v` to include `module.v` and use `iverilog module_t.v -o a.out` instead.
 
@@ -74,6 +76,8 @@ You may use "include guard" to prevent from module redefinition.
 ```
 
 But honestly, this is pretty annoying and `iverilog module.v module_t.v -o a.out` is more sweet for scripts...
+If you figure out something to solve this, a Pull Request (or an Issue) is welcome.
+
 
 
 Contributing
@@ -85,7 +89,7 @@ If you would like to contribute enhancements or fixes, please do the following:
 1. Hack on a separate topic branch created from the latest `master`.
 1. Commit and push the topic branch.
 1. Make a pull request.
-1. Be patient.  ;-)
+1. Be patient.
 
 Please note that modifications should follow these coding guidelines:
 
