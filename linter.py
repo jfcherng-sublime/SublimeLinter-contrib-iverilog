@@ -1,10 +1,9 @@
 #
 # linter.py
-# Linter for SublimeLinter3, a code checking framework for Sublime Text 3
+# Linter for SublimeLinter4, a code checking framework for Sublime Text 3
 #
 # Written by Jack Cherng
-# https://github.com/jfcherng/SublimeLinter-contrib-iverilog
-# Copyright (c) 2017 jfcherng
+# Copyright (c) 2017-2018 jfcherng
 #
 # License: MIT
 #
