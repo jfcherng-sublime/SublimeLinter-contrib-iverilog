@@ -1,3 +1,9 @@
+SublimeLinter-contrib-iverilog 2.0.0
+====================================
+
+- Drop support for SublimeLinter 3.
+
+
 SublimeLinter-contrib-iverilog 1.1.0
 ====================================
 
