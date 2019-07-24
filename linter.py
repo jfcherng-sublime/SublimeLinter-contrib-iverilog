@@ -8,44 +8,35 @@
 # License: MIT
 #
 
-from SublimeLinter.lint import Linter, util
+from SublimeLinter.lint import Linter
 import sublime
-import SublimeLinter.lint
-
-
-def get_SL_version():
-    """
-    Return the major version number of SublimeLinter.
-    """
-
-    return getattr(SublimeLinter.lint, 'VERSION', 3)
 
 
 class Iverilog(Linter):
     # http://www.sublimelinter.com/en/stable/linter_attributes.html
-    cmd = 'iverilog -t null'
-    tempfile_suffix = 'verilog'
-    multiline = False
-    error_stream = util.STREAM_BOTH
+    name = "iverilog"
+    cmd = "iverilog -t null ${args}"
+    tempfile_suffix = "verilog"
+    multiline = True
+    on_stderr = None
 
-    if get_SL_version() == 3:
-        syntax = ('verilog')
-    else:
-        on_stderr = None  # handle stderr via split_match
-        defaults = {
-            'selector': 'source.verilog',
-        }
+    # fmt: off
+    defaults = {
+        "selector": "source.verilog",
+        "-I +": [],
+        "-y +": [],
+    }
+    # fmt: on
 
     # there is a ":" in the filepath under Windows like C:\DIR\FILE
-    if sublime.platform() == 'windows':
-        filepath = r'[^:]+:[^:]+'
+    if sublime.platform() == "windows":
+        filepath_regex = r"[^:]+:[^:]+"
     else:
-        filepath = r'[^:]+'
+        filepath_regex = r"[^:]+"
 
     # what kind of messages should be caught?
     regex = (
-        r'(?P<file>{0}):(?P<line>\d+):\s*'
-        r'(?:(?:(?P<warning>warning)|(?P<error>error)):)?\s*'
-        r'(?P<message>.*)'
-        .format(filepath)
+        r"(?P<file>{0}):(?P<line>\d+):\s*"
+        r"(?:(?:(?P<warning>warning)|(?P<error>error)):)?\s*"
+        r"(?P<message>.*)".format(filepath_regex)
     )
