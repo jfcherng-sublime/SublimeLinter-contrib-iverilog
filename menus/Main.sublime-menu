@@ -14,7 +14,7 @@
                     "file": "${packages}/SublimeLinter-contrib-iverilog/README.md"
                 }
             }, {
-                "caption": "Changelog",
+                "caption": "CHANGELOG",
                 "command": "open_file",
                 "args": {
                     "file": "${packages}/SublimeLinter-contrib-iverilog/CHANGELOG.md"
