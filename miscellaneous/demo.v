@@ -21,6 +21,9 @@ input enable, clk, reset;
 // Internal Variables
 reg [7:0] out;
 
+// test for non-existing module
+Dummy dummy();
+
 always @(posedge clk)
 if (reset) begin
     out <= 8'b0 ;
