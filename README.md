@@ -5,6 +5,9 @@ provides an interface to [iverilog](http://iverilog.wikia.com/wiki/Main_Page) in
 To make this plugin work, you need to have `iverilog` installed.
 This plugin will be activated with files that have the `Verilog` syntax.
 
+By the way, I also recommend the
+[Verilator Linter](https://packagecontrol.io/packages/SublimeLinter-contrib-verilator).
+
 
 ## Installation
 
@@ -51,30 +54,6 @@ For information on generic linter settings, please see
 ## Demo
 
 ![linting_example](https://raw.githubusercontent.com/jfcherng/SublimeLinter-contrib-iverilog/gh-pages/images/linting_example.png)
-
-
-## Constraints
-
-If your module references designs from other .v files, you must use `` `include "module.v"`` to include them for this linting plugin.
-
-For example, one of ways to do a simulation is `iverilog module.v module_t.v -o a.out` where `module_t.v` is a testbench file.
-This way does not use the `` `include`` syntax in `module_t.v` but lists files in the command line.
-Therefore, you will see ``Unknown module type: module`` in `module_t.v` since this plugin only check the current file.
-To avoid this, you have to modify `module_t.v` to include `module.v` and use `iverilog module_t.v -o a.out` instead.
-
-![include_module_file](https://raw.githubusercontent.com/jfcherng/SublimeLinter-contrib-iverilog/gh-pages/images/include_module_file.png)
-
-You may use "include guard" to prevent from module redefinition.
-
-```verilog
-`ifndef _MODULE_
-`define _MODULE_
-    // your module design here
-`endif
-```
-
-But honestly, this is pretty annoying and `iverilog module.v module_t.v -o a.out` is more sweet for scripts...
-If you figure out something to solve this, a Pull Request (or an Issue) is welcome.
 
 
 ## Contributing
