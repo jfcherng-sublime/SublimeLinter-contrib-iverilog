@@ -5,8 +5,8 @@ provides an interface to [iverilog](http://iverilog.wikia.com/wiki/Main_Page) in
 To make this plugin work, you need to have `iverilog` installed.
 This plugin will be activated with files that have the `Verilog` syntax.
 
-By the way, I also recommend the
-[Verilator Linter](https://packagecontrol.io/packages/SublimeLinter-contrib-verilator).
+By the way, you may also try the 
+[Verilator Linter](https://packagecontrol.io/packages/SublimeLinter-contrib-verilator) package.
 
 
 ## Installation
@@ -80,7 +80,7 @@ To test whether your `iverilog` supports it, use the `$ iverilog -i` command to 
 After `iverilog` has been installed,
 
 1. Update SublimeLinter's PATH in SublimeLinter's settings file.
-  ```javascript
+  ```js
   "paths": {
       "linux": [
           "/usr/local/iverilog/bin",
