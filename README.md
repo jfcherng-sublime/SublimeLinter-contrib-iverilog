@@ -56,6 +56,56 @@ For information on generic linter settings, please see
 ![linting_example](https://raw.githubusercontent.com/jfcherng/SublimeLinter-contrib-iverilog/gh-pages/images/linting_example.png)
 
 
+## Solving `Unknown module type: XXX`
+
+There is actually [`-i` flag](https://github.com/steveicarus/iverilog/pull/151) with the `master` branch of `iverilog`.
+To test whether your `iverilog` supports it, use the `$ iverilog -i` command to see whether it says `iverilog: invalid option -- 'i'`. If your `iverilog` has no `-i` flag and you wish to use it, continue the following steps.
+
+- If you are on Windows,
+
+  1. Just download and install [the latest Windows v11 x64 dev build](http://bleyer.org/icarus/).
+
+- If you are on Ubuntu,
+
+  1. Download and execute the [ubuntu-compile-iverilog-mater.sh](https://raw.githubusercontent.com/jfcherng/SublimeLinter-contrib-iverilog/master/ubuntu-compile-iverilog-mater.sh) from this package.
+     ```bash
+     $ curl -sSL "https://raw.githubusercontent.com/jfcherng/SublimeLinter-contrib-iverilog/master/ubuntu-compile-iverilog-mater.sh" | bash
+     ```
+  1. If there is no error, the `master` branch `iverilog` should have been installed to `/usr/local/iverilog`.
+
+- If you use neither Windows nor Ubuntu,
+
+  1. It should be easy to modify `ubuntu-compile-iverilog-mater.sh` to fit your OS.
+
+After `iverilog` has been installed,
+
+1. Update SublimeLinter's PATH in SublimeLinter's settings file.
+  ```javascript
+  "paths": {
+      "linux": [
+          "/usr/local/iverilog/bin",
+      ],
+      "osx": [],
+      "windows": [
+          "C:\\iverilog\\bin",
+      ],
+  },
+  ```
+
+1. Pass the `-i` flag to the linter by modifying SublimeLinter's settings file.
+  ```js
+  "linters": {
+      "iverilog": {
+          "disable": false,
+          "args": ["-i"], // add the "-i" flag
+          "excludes": [],
+      },
+  },
+  ```
+
+1. The `Unknown module type: XXX` problem should have been solved (ignored).
+
+
 ## Contributing
 
 If you would like to contribute enhancements or fixes, please do the following:
