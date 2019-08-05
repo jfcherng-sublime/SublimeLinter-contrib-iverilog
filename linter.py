@@ -15,7 +15,7 @@ import sublime
 class Iverilog(Linter):
     # http://www.sublimelinter.com/en/stable/linter_attributes.html
     name = "iverilog"
-    cmd = "iverilog -i -t null ${args}"
+    cmd = "iverilog ${args}"
     tempfile_suffix = "verilog"
     multiline = True
     on_stderr = None
@@ -23,6 +23,7 @@ class Iverilog(Linter):
     # fmt: off
     defaults = {
         "selector": "source.verilog",
+        "-t": "null",
         "-I +": [],
         "-y +": [],
     }
