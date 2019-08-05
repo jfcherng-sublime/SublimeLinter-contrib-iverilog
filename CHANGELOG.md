@@ -1,3 +1,8 @@
+# SublimeLinter-contrib-iverilog 2.1.1
+
+- Revert "No longer emits error about module not found."
+
+
 # SublimeLinter-contrib-iverilog 2.1.0
 
 - No longer emits error about module not found.
