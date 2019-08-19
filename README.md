@@ -1,5 +1,11 @@
 # SublimeLinter-contrib-iverilog
 
+<a href="https://packagecontrol.io/packages/SublimeLinter-contrib-iverilog"><img alt="Package Control" src="https://img.shields.io/packagecontrol/dt/SublimeLinter-contrib-iverilog"></a>
+<a href="https://github.com/jfcherng/SublimeLinter-contrib-iverilog/tags"><img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/tag/jfcherng/SublimeLinter-contrib-iverilog?logo=github"></a>
+<a href="https://github.com/jfcherng/SublimeLinter-contrib-iverilog/blob/master/LICENSE"><img alt="Project license" src="https://img.shields.io/github/license/jfcherng/SublimeLinter-contrib-iverilog?logo=github"></a>
+<a href="https://github.com/jfcherng/SublimeLinter-contrib-iverilog/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/jfcherng/SublimeLinter-contrib-iverilog?logo=github"></a>
+<a href="https://www.paypal.me/jfcherng/5usd" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-blue.svg?logo=paypal" /></a>
+
 This linter plugin for [SublimeLinter](https://sublimelinter.readthedocs.org)
 provides an interface to [iverilog](http://iverilog.wikia.com/wiki/Main_Page) into Sublime Text.
 To make this plugin work, you need to have `iverilog` installed.
@@ -80,28 +86,28 @@ To test whether your `iverilog` supports it, use the `$ iverilog -i` command to 
 After `iverilog` has been installed,
 
 1. Update SublimeLinter's PATH in SublimeLinter's settings file.
-  ```js
-  "paths": {
-      "linux": [
-          "/usr/local/iverilog/bin",
-      ],
-      "osx": [],
-      "windows": [
-          "C:\\iverilog\\bin",
-      ],
-  },
-  ```
+   ```js
+   "paths": {
+       "linux": [
+           "/usr/local/iverilog/bin",
+       ],
+       "osx": [],
+       "windows": [
+           "C:\\iverilog\\bin",
+       ],
+   },
+   ```
 
 1. Pass the `-i` flag to the linter by modifying SublimeLinter's settings file.
-  ```js
-  "linters": {
-      "iverilog": {
-          "disable": false,
-          "args": ["-i"], // add the "-i" flag
-          "excludes": [],
-      },
-  },
-  ```
+   ```js
+   "linters": {
+       "iverilog": {
+           "disable": false,
+           "args": ["-i"], // add the "-i" flag
+           "excludes": [],
+       },
+   },
+   ```
 
 1. The `Unknown module type: XXX` problem should have been solved (ignored).
 
@@ -125,9 +131,3 @@ Please note that modifications should follow these coding guidelines:
 - Please use descriptive variable names, no abbreviations unless they are very well known.
 
 Thank you for helping out!
-
-
-Supporters <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ATXYY9Y78EQ3Y" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" /></a>
-==========
-
-Thank you guys for sending me some cups of coffee.
