@@ -23,6 +23,7 @@ class Iverilog(Linter):
     # fmt: off
     defaults = {
         "selector": "source.verilog | source.systemverilog",
+        # @see https://iverilog.fandom.com/wiki/Iverilog_Flags
         "-t": "null",
         "-g": 2012,
         "-I +": [],
