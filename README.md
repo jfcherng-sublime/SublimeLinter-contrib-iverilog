@@ -28,13 +28,15 @@ or [Sublime Text SystemVerilog](https://packagecontrol.io/packages/SystemVerilog
 
 ### Linter installation
 
+- iverilog >= 0.9
+
 Before installing this plugin, you must ensure that `iverilog` is installed on your system.
 To install `iverilog`, please see [this](https://iverilog.wikia.com/wiki/Installation_Guide).
 
 
 ### Plugin installation
 
-Please use [Package Control](https://sublime.wbond.net/installation) to install the linter plugin.
+Please use [Package Control](https://packagecontrol.io/installation) to install the linter plugin.
 This will ensure that the plugin will be updated when new versions are available.
 If you want to install from source so you can modify the source code,
 you probably know what you are doing so we won't cover that here.
@@ -65,8 +67,12 @@ For information on generic linter settings, please see
 
 ## Solving `Unknown module type: XXX`
 
-There is actually [`-i` flag](https://github.com/steveicarus/iverilog/pull/151) with the `master` branch of `iverilog`.
-To test whether your `iverilog` supports it, use the `$ iverilog -i` command to see whether it says `iverilog: invalid option -- 'i'`. If your `iverilog` has no `-i` flag and you wish to use it, continue the following steps.
+There is actually [`-i` flag](https://github.com/steveicarus/iverilog/pull/151) 
+with the `master` branch of `iverilog` to ignore this kind of error messages.
+
+To test whether your `iverilog` supports it, 
+use the `$ iverilog -i` command to see whether it says `iverilog: invalid option -- 'i'`. 
+If your `iverilog` has no `-i` flag and you wish to use it, continue the following steps.
 
 - If you are on Windows,
 
