@@ -21,8 +21,9 @@ SublimeLinter must be installed in order to use this plugin.
 If SublimeLinter is not installed, please follow the instructions
 [here](https://sublimelinter.readthedocs.org/en/latest/installation.html).
 
-Verilog syntax highlight is not natively supplied by Sublime Text.
-You may install [Sublime Text Verilog](https://sublime.wbond.net/packages/Verilog) to do the job.
+Verilog/SystemVerilog syntax highlight is not natively supplied by Sublime Text.
+You may install [Sublime Text Verilog](https://packagecontrol.io/packages/Verilog) 
+or [Sublime Text SystemVerilog](https://packagecontrol.io/packages/SystemVerilog) to do the job.
 
 
 ### Linter installation
