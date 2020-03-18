@@ -3,7 +3,7 @@
 # Linter for SublimeLinter4, a code checking framework for Sublime Text 3
 #
 # Written by Jack Cherng
-# Copyright (c) 2017-2019 jfcherng
+# Copyright (c) 2017-2020 jfcherng
 #
 # License: MIT
 #
@@ -20,7 +20,6 @@ class Iverilog(Linter):
     multiline = True
     on_stderr = None
 
-    # fmt: off
     defaults = {
         "selector": "source.verilog | source.systemverilog",
         # @see https://iverilog.fandom.com/wiki/Iverilog_Flags
@@ -29,7 +28,6 @@ class Iverilog(Linter):
         "-I +": [],
         "-y +": [],
     }
-    # fmt: on
 
     # there is a ":" in the filepath under Windows like C:\DIR\FILE
     if sublime.platform() == "windows":
@@ -41,5 +39,5 @@ class Iverilog(Linter):
     regex = (
         r"(?P<file>{0}):(?P<line>\d+):\s*"
         r"(?:(?:(?P<warning>warning)|(?P<error>error)):)?\s*"
-        r"(?P<message>.*)".format(filepath_regex)
-    )
+        r"(?P<message>.*)"
+    ).format(filepath_regex)
