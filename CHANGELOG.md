@@ -1,9 +1,9 @@
-# 2.1.3
+## 2.1.3
 
 - Enabled in `source.systemverilog` as well.
 
 
-# 2.1.2
+## 2.1.2
 
 - Update readme.
 
@@ -14,31 +14,31 @@
   To use the `-i` flag and the `master` branch of `iverilog`, please see https://git.io/fjH92.
 
 
-# 2.1.1
+## 2.1.1
 
 - Revert "No longer emits error about module not found."
 
 
-# 2.1.0
+## 2.1.0
 
 - No longer emits error about module not found.
 
 
-# 2.0.0
+## 2.0.0
 
 - Drop support for SublimeLinter 3.
 
 
-# 1.1.0
+## 1.1.0
 
 - Compatible with SublimeLinter 4.6.2.
 
 
-# 1.0.4
+## 1.0.4
 
 - Just some directory structure tweaks.
 
 
-# 1.0.0
+## 1.0.0
 
 - Initial release.

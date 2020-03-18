@@ -1,35 +1,48 @@
-[{
+[
+  {
     "id": "preferences",
-    "children": [{
+    "children": [
+      {
         "caption": "Package Settings",
         "id": "package-settings",
-        "children": [{
+        "children": [
+          {
             "caption": "SublimeLinter-contrib-iverilog",
-            "children": [{
-                "caption": "-"
-            }, {
+            "children": [
+              {
+                "caption": "-",
+              },
+              {
                 "caption": "README",
                 "command": "open_file",
                 "args": {
-                    "file": "${packages}/SublimeLinter-contrib-iverilog/README.md"
-                }
-            }, {
+                  "file": "${packages}/SublimeLinter-contrib-iverilog/README.md",
+                },
+              },
+              {
                 "caption": "CHANGELOG",
                 "command": "open_file",
                 "args": {
-                    "file": "${packages}/SublimeLinter-contrib-iverilog/CHANGELOG.md"
-                }
-            }, {
-                "caption": "-"
-            }, {
+                  "file": "${packages}/SublimeLinter-contrib-iverilog/CHANGELOG.md",
+                },
+              },
+              {
+                "caption": "-",
+              },
+              {
                 "caption": "Open the demo file",
                 "command": "open_file",
                 "args": {
-                    "file": "${packages}/SublimeLinter-contrib-iverilog/miscellaneous/demo.v"
-                }
-            }, {
-                "caption": "-"
-            }]
-        }]
-    }]
-}]
+                  "file": "${packages}/SublimeLinter-contrib-iverilog/miscellaneous/demo.v",
+                },
+              },
+              {
+                "caption": "-",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+]
