@@ -1,17 +1,17 @@
 # SublimeLinter-contrib-iverilog
 
-<a href="https://packagecontrol.io/packages/SublimeLinter-contrib-iverilog"><img alt="Package Control" src="https://img.shields.io/packagecontrol/dt/SublimeLinter-contrib-iverilog"></a>
-<a href="https://github.com/jfcherng/SublimeLinter-contrib-iverilog/tags"><img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/tag/jfcherng/SublimeLinter-contrib-iverilog?logo=github"></a>
-<a href="https://github.com/jfcherng/SublimeLinter-contrib-iverilog/blob/master/LICENSE"><img alt="Project license" src="https://img.shields.io/github/license/jfcherng/SublimeLinter-contrib-iverilog?logo=github"></a>
-<a href="https://github.com/jfcherng/SublimeLinter-contrib-iverilog/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/jfcherng/SublimeLinter-contrib-iverilog?logo=github"></a>
-<a href="https://www.paypal.me/jfcherng/5usd" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-blue.svg?logo=paypal" /></a>
+[![Package Control](https://img.shields.io/packagecontrol/dt/SublimeLinter-contrib-iverilog)](https://packagecontrol.io/packages/SublimeLinter-contrib-iverilog)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/jfcherng/SublimeLinter-contrib-iverilog?logo=github)](https://github.com/jfcherng/SublimeLinter-contrib-iverilog/tags)
+[![Project license](https://img.shields.io/github/license/jfcherng/SublimeLinter-contrib-iverilog?logo=github)](https://github.com/jfcherng/SublimeLinter-contrib-iverilog/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/jfcherng/SublimeLinter-contrib-iverilog?logo=github)](https://github.com/jfcherng/SublimeLinter-contrib-iverilog/stargazers)
+[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-blue.svg?logo=paypal)](https://www.paypal.me/jfcherng/5usd)
 
 This linter plugin for [SublimeLinter](https://sublimelinter.readthedocs.org)
 provides an interface to [iverilog](http://iverilog.wikia.com/wiki/Main_Page) into Sublime Text.
 To make this plugin work, you need to have `iverilog` installed.
 This plugin will be activated with files that have the `Verilog` syntax.
 
-By the way, you may also try the 
+By the way, you may also try the
 [Verilator Linter](https://packagecontrol.io/packages/SublimeLinter-contrib-verilator) package.
 
 
@@ -22,7 +22,7 @@ If SublimeLinter is not installed, please follow the instructions
 [here](https://sublimelinter.readthedocs.org/en/latest/installation.html).
 
 Verilog/SystemVerilog syntax highlight is not natively supplied by Sublime Text.
-You may install [Sublime Text Verilog](https://packagecontrol.io/packages/Verilog) 
+You may install [Sublime Text Verilog](https://packagecontrol.io/packages/Verilog)
 or [Sublime Text SystemVerilog](https://packagecontrol.io/packages/SystemVerilog) to do the job.
 
 
@@ -67,11 +67,11 @@ For information on generic linter settings, please see
 
 ## Solving `Unknown module type: XXX`
 
-There is actually [`-i` flag](https://github.com/steveicarus/iverilog/pull/151) 
+There is actually [`-i` flag](https://github.com/steveicarus/iverilog/pull/151)
 with the `master` branch of `iverilog` to ignore this kind of error messages.
 
-To test whether your `iverilog` supports it, 
-use the `$ iverilog -i` command to see whether it says `iverilog: invalid option -- 'i'`. 
+To test whether your `iverilog` supports it,
+use the `$ iverilog -i` command to see whether it says `iverilog: invalid option -- 'i'`.
 If your `iverilog` has no `-i` flag and you wish to use it, continue the following steps.
 
 - If you are on Windows,
@@ -81,9 +81,11 @@ If your `iverilog` has no `-i` flag and you wish to use it, continue the followi
 - If you are on Ubuntu,
 
   1. Download and execute the [ubuntu-compile-iverilog-mater.sh](https://raw.githubusercontent.com/jfcherng/SublimeLinter-contrib-iverilog/master/ubuntu-compile-iverilog-mater.sh) from this package.
+
      ```bash
-     $ curl -sSL "https://raw.githubusercontent.com/jfcherng/SublimeLinter-contrib-iverilog/master/ubuntu-compile-iverilog-mater.sh" | bash
+     curl -sSL "https://raw.githubusercontent.com/jfcherng/SublimeLinter-contrib-iverilog/master/ubuntu-compile-iverilog-mater.sh" | bash
      ```
+
   1. If there is no error, the `master` branch `iverilog` should have been installed to `/usr/local/iverilog`.
 
 - If you use neither Windows nor Ubuntu,
@@ -93,6 +95,7 @@ If your `iverilog` has no `-i` flag and you wish to use it, continue the followi
 After `iverilog` has been installed,
 
 1. Update SublimeLinter's PATH in SublimeLinter's settings file.
+
    ```js
    "paths": {
        "linux": [
@@ -106,6 +109,7 @@ After `iverilog` has been installed,
    ```
 
 1. Pass the `-i` flag to the linter by modifying SublimeLinter's settings file.
+
    ```js
    "linters": {
        "iverilog": {
