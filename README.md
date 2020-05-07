@@ -1,10 +1,12 @@
 # SublimeLinter-contrib-iverilog
 
-[![Package Control](https://img.shields.io/packagecontrol/dt/SublimeLinter-contrib-iverilog)](https://packagecontrol.io/packages/SublimeLinter-contrib-iverilog)
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/jfcherng/SublimeLinter-contrib-iverilog?logo=github)](https://github.com/jfcherng/SublimeLinter-contrib-iverilog/tags)
-[![Project license](https://img.shields.io/github/license/jfcherng/SublimeLinter-contrib-iverilog?logo=github)](https://github.com/jfcherng/SublimeLinter-contrib-iverilog/blob/master/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/jfcherng/SublimeLinter-contrib-iverilog?logo=github)](https://github.com/jfcherng/SublimeLinter-contrib-iverilog/stargazers)
-[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-blue.svg?logo=paypal)](https://www.paypal.me/jfcherng/5usd)
+<!-- [![Travis (.org) branch](https://img.shields.io/travis/jfcherng-sublime/SublimeLinter-contrib-iverilog/master?style=flat-square)](https://travis-ci.org/jfcherng-sublime/SublimeLinter-contrib-iverilog) -->
+
+[![Package Control](https://img.shields.io/packagecontrol/dt/SublimeLinter-contrib-iverilog?style=flat-square)](https://packagecontrol.io/packages/SublimeLinter-contrib-iverilog)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/jfcherng-sublime/SublimeLinter-contrib-iverilog?style=flat-square&logo=github)](https://github.com/jfcherng-sublime/SublimeLinter-contrib-iverilog/tags)
+[![Project license](https://img.shields.io/github/license/jfcherng-sublime/SublimeLinter-contrib-iverilog?style=flat-square&logo=github)](https://github.com/jfcherng-sublime/SublimeLinter-contrib-iverilog/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/jfcherng-sublime/SublimeLinter-contrib-iverilog?style=flat-square&logo=github)](https://github.com/jfcherng-sublime/SublimeLinter-contrib-iverilog/stargazers)
+[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-blue.svg?style=flat-square&logo=paypal)](https://www.paypal.me/jfcherng/5usd)
 
 This linter plugin for [SublimeLinter](https://sublimelinter.readthedocs.org)
 provides an interface to [iverilog](http://iverilog.wikia.com/wiki/Main_Page) into Sublime Text.
@@ -13,7 +15,6 @@ This plugin will be activated with files that have the `Verilog` syntax.
 
 By the way, you may also try the
 [Verilator Linter](https://packagecontrol.io/packages/SublimeLinter-contrib-verilator) package.
-
 
 ## Installation
 
@@ -25,14 +26,12 @@ Verilog/SystemVerilog syntax highlight is not natively supplied by Sublime Text.
 You may install [Sublime Text Verilog](https://packagecontrol.io/packages/Verilog)
 or [Sublime Text SystemVerilog](https://packagecontrol.io/packages/SystemVerilog) to do the job.
 
-
 ### Linter installation
 
 - iverilog >= 0.9
 
 Before installing this plugin, you must ensure that `iverilog` is installed on your system.
 To install `iverilog`, please see [this](https://iverilog.wikia.com/wiki/Installation_Guide).
-
 
 ### Plugin installation
 
@@ -51,7 +50,6 @@ To install via Package Control, do the following:
 1. When the plugin list appears, type `iverilog`. Among the entries you should see `SublimeLinter-contrib-iverilog`.
    If that entry is not highlighted, use the keyboard or mouse to select it.
 
-
 ## Settings
 
 For general information on how SublimeLinter works with settings, please see
@@ -59,11 +57,9 @@ For general information on how SublimeLinter works with settings, please see
 For information on generic linter settings, please see
 [Linter Settings](https://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
 
-
 ## Demo
 
-![linting_example](https://raw.githubusercontent.com/jfcherng/SublimeLinter-contrib-iverilog/gh-pages/images/linting_example.png)
-
+![linting_example](https://raw.githubusercontent.com/jfcherng-sublime/SublimeLinter-contrib-iverilog/gh-pages/images/linting_example.png)
 
 ## Solving `Unknown module type: XXX`
 
@@ -80,10 +76,10 @@ If your `iverilog` has no `-i` flag and you wish to use it, continue the followi
 
 - If you are on Ubuntu,
 
-  1. Download and execute the [ubuntu-compile-iverilog-mater.sh](https://raw.githubusercontent.com/jfcherng/SublimeLinter-contrib-iverilog/master/ubuntu-compile-iverilog-mater.sh) from this package.
+  1. Download and execute the [ubuntu-compile-iverilog-mater.sh](https://raw.githubusercontent.com/jfcherng-sublime/SublimeLinter-contrib-iverilog/master/ubuntu-compile-iverilog-mater.sh) from this package.
 
      ```bash
-     curl -sSL "https://raw.githubusercontent.com/jfcherng/SublimeLinter-contrib-iverilog/master/ubuntu-compile-iverilog-mater.sh" | bash
+     curl -sSL "https://raw.githubusercontent.com/jfcherng-sublime/SublimeLinter-contrib-iverilog/master/ubuntu-compile-iverilog-mater.sh" | bash
      ```
 
   1. If there is no error, the `master` branch `iverilog` should have been installed to `/usr/local/iverilog`.
@@ -121,7 +117,6 @@ After `iverilog` has been installed,
    ```
 
 1. The `Unknown module type: XXX` problem should have been solved (ignored).
-
 
 ## Contributing
 
