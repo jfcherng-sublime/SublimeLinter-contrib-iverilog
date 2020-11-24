@@ -9,6 +9,7 @@
 #
 
 from SublimeLinter.lint import Linter
+import re
 import sublime
 
 
@@ -36,8 +37,12 @@ class Iverilog(Linter):
         filepath_regex = r"[^:]+"
 
     # what kind of messages should be caught?
-    regex = (
-        r"(?P<file>{0}):(?P<line>\d+):\s*"
-        r"(?:(?:(?P<warning>warning)|(?P<error>error)):)?\s*"
-        r"(?P<message>.*)"
-    ).format(filepath_regex)
+    regex = re.compile(
+        (
+            r"(?P<file>{0}):(?P<line>\d+):\s*"
+            r"(?:(?:(?P<warning>warning)|(?P<error>error)):)?\s*"
+            r"(?P<message>.*)"
+            # ...
+        ).format(filepath_regex),
+        re.MULTILINE,
+    )
