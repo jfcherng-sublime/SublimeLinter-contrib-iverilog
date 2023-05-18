@@ -1,7 +1,5 @@
 # SublimeLinter-contrib-iverilog
 
-<!-- [![Travis (.org) branch](https://img.shields.io/travis/jfcherng-sublime/SublimeLinter-contrib-iverilog/master?style=flat-square)](https://travis-ci.org/jfcherng-sublime/SublimeLinter-contrib-iverilog) -->
-
 [![Package Control](https://img.shields.io/packagecontrol/dt/SublimeLinter-contrib-iverilog?style=flat-square)](https://packagecontrol.io/packages/SublimeLinter-contrib-iverilog)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/jfcherng-sublime/SublimeLinter-contrib-iverilog?style=flat-square&logo=github)](https://github.com/jfcherng-sublime/SublimeLinter-contrib-iverilog/tags)
 [![Project license](https://img.shields.io/github/license/jfcherng-sublime/SublimeLinter-contrib-iverilog?style=flat-square&logo=github)](https://github.com/jfcherng-sublime/SublimeLinter-contrib-iverilog/blob/master/LICENSE)
@@ -13,8 +11,12 @@ provides an interface to [iverilog](http://iverilog.wikia.com/wiki/Main_Page) in
 To make this plugin work, you need to have `iverilog` installed.
 This plugin will be activated with files that have the `Verilog` syntax.
 
-By the way, you may also try the
-[Verilator Linter](https://packagecontrol.io/packages/SublimeLinter-contrib-verilator) package.
+By the way, you may also try
+
+- [LSP-VHDL-ls](https://packagecontrol.io/packages/LSP-VHDL-ls)
+- [Verilator Linter](https://packagecontrol.io/packages/SublimeLinter-contrib-verilator)
+
+These packages above should beat this one. 🙂
 
 ## Installation
 
