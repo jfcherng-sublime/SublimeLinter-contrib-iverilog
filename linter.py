@@ -3,14 +3,17 @@
 # Linter for SublimeLinter4, a code checking framework for Sublime Text 3
 #
 # Written by Jack Cherng
-# Copyright (c) 2017-2020 jfcherng
+# Copyright (c) 2017-2024 jfcherng
 #
 # License: MIT
 #
 
-from SublimeLinter.lint import Linter
+from __future__ import annotations
+
 import re
+
 import sublime
+from SublimeLinter.lint import Linter
 
 
 class Iverilog(Linter):
@@ -39,10 +42,9 @@ class Iverilog(Linter):
     # what kind of messages should be caught?
     regex = re.compile(
         (
-            r"(?P<file>{0}):(?P<line>\d+):\s*"
+            rf"(?P<file>{filepath_regex}):(?P<line>\d+):\s*"
             r"(?:(?:(?P<warning>warning)|(?P<error>error)):)?\s*"
             r"(?P<message>.*)"
-            # ...
-        ).format(filepath_regex),
+        ),
         re.MULTILINE,
     )
