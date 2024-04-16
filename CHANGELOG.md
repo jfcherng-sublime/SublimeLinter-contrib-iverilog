@@ -1,3 +1,7 @@
+## 3.0.0
+
+This is the first release which runs on the Python 3.8 plugin host in Sublime Text 4.
+
 ## 2.1.4
 
 No changes. Just to annotate that this is the last version for Sublime Text 3.
